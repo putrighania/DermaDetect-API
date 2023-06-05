@@ -136,10 +136,10 @@ fastify.delete('/articles/:id', async (request, reply) => {
     }
 });
 
-fastify.listen(3000, (err) => {
+fastify.listen(3000,'0.0.0.0',(err) => {
     if (err) {
         console.error(err);
         process.exit(1);
     }
-    console.log('Server is running on http://localhost:3000');
+    console.log('Server is running on http://0.0.0.0:3000');
 });
